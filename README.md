@@ -5,6 +5,12 @@ For configuring Mapproxy with a cache per zoom level. Since for this setup you n
 
 Takes an input `mapproxy.yaml` and `seed.yaml`, and a `layers.yaml` which contains the definitions of layers and zoom levels you want to configure. The `mapproxy.yaml` and `seeds.yaml` could be a real existing one you want to convert, or they could be minimal ones with stub properties. In the latter case, they need to be complete except for the `layers, caches, sources` and the `seeds` objects respectively. This script will fill those in based on your `layers.yaml` file. See the example `layers.yaml` which contains some comments documenting the available options.
 
+You can combine consecutive zoom levels into one cache by joining them with an underscore in the `levels` key in `layers.yaml`. For instance:
+
+    levels: ['0_8', '9', '10', '11']
+
+will configure one cache for levels 0 through 8, and a cache each for levels 9, 10, and 11.
+
 Note that these scripts generate couchdb cache backends, since that is what we are using. If you want to use a different type of backend, you will have to modify `sources.js`.
 
 Installation
