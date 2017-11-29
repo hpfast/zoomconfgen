@@ -16,27 +16,27 @@ You can install this as a standalone command-line program with `npm install -g z
 
 Usage
 -----
-"""
-Usage: zoomconfgen [-h] [-v] [-c MAPPROXY_CONFIG] [-s SEED_CONFIG]
-                [-l LAYER_CONFIG] [--mapproxy-output MAPPROXY_OUTPUT]
-                [--seed-output SEED_OUTPUT] [-o]
-                
 
-convert mapproxy config files to split up caches by zoom level
 
-Optional arguments:
-  -h, --help            Show this help message and exit.
-  -v, --version         Show program's version number and exit.
-  -c MAPPROXY_CONFIG, --mapproxy-config MAPPROXY_CONFIG
-                        the input mapproxy config file you want to convert
-  -s SEED_CONFIG, --seed-config SEED_CONFIG
-                        the input seed file you want to convert
-  -l LAYER_CONFIG, --layer-config LAYER_CONFIG
-                        the config file with layers and zoom levels to 
-                        configure
-  --mapproxy-output MAPPROXY_OUTPUT
-                        name of the mapproxy.yaml output file.
-  --seed-output SEED_OUTPUT
-                        name of the seed.yaml output file.
-  -o, --stdout          write to stdout
-"""
+    Usage: zoomconfgen [-h] [-v] [-c MAPPROXY_CONFIG] [-s SEED_CONFIG]
+                    [-l LAYER_CONFIG] [--mapproxy-output MAPPROXY_OUTPUT]
+                    [--seed-output SEED_OUTPUT] [-o]
+                    
+    
+    convert mapproxy config files to split up caches by zoom level
+    
+    Optional arguments:
+      -h, --help            Show this help message and exit.
+      -v, --version         Show program's version number and exit.
+      -c MAPPROXY_CONFIG, --mapproxy-config MAPPROXY_CONFIG
+                            the input mapproxy config file you want to convert
+      -s SEED_CONFIG, --seed-config SEED_CONFIG
+                            the input seed file you want to convert
+      -l LAYER_CONFIG, --layer-config LAYER_CONFIG
+                            the config file with layers and zoom levels to 
+                            configure
+      --mapproxy-output MAPPROXY_OUTPUT
+                            name of the mapproxy.yaml output file.
+      --seed-output SEED_OUTPUT
+                            name of the seed.yaml output file.
+      -o, --stdout          write to stdout
