@@ -31,17 +31,19 @@ function handleArgError(target, err) {
 
 
 
-conf.mapproxy_config.sources = sources(conf.layer_config, conf)
-conf.mapproxy_config.layers = layers(conf.layer_config)
-conf.mapproxy_config.caches = caches(conf.layer_config)
-conf.seed_config.seeds = seeds(conf.layer_config)
-if (args.mapproxy_output) {
-    fs.writeFileSync(args.mapproxy_output, yaml.dump(conf.mapproxy_config), 'utf-8')
-}
-if (args.seed_output) {
-    fs.writeFileSync(args.seed_output, yaml.dump(conf.seed_config), 'utf-8')
-}
+module.exports = function() {
+    conf.mapproxy_config.sources = sources(conf.layer_config, conf)
+    conf.mapproxy_config.layers = layers(conf.layer_config)
+    conf.mapproxy_config.caches = caches(conf.layer_config)
+    conf.seed_config.seeds = seeds(conf.layer_config)
+    if (args.mapproxy_output) {
+        fs.writeFileSync(args.mapproxy_output, yaml.dump(conf.mapproxy_config), 'utf-8')
+    }
+    if (args.seed_output) {
+        fs.writeFileSync(args.seed_output, yaml.dump(conf.seed_config), 'utf-8')
+    }
 
-if (args.stdout) {
-    console.log(JSON.stringify(conf.mapproxy_config, null, 2))
+    if (args.stdout) {
+        console.log(JSON.stringify(conf.mapproxy_config, null, 2))
+    }
 }
