@@ -24,7 +24,7 @@ conf.srs = ['EPSG:28992'];
 
 
 function handleArgError(target, err) {
-    console.error('error parsing layer_config');
+    console.error('error parsing an input file');
     console.error(err);
 }
 

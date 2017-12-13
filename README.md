@@ -16,7 +16,7 @@ Note that these scripts generate couchdb cache backends, since that is what we a
 Installation
 ------------
 
-You can install this as a standalone command-line program with `npm install -g zoomconfgen`. Or you can run this as a Docker container:
+You can install this as a standalone command-line program with `[sudo] npm install -g zoomconfgen`. See https://nodejs.org/en/download/ if you don't have NodeJS and NPM. Or you can run this as a Docker container:
 
     docker run --rm hpfast/zoomconfgen [arglist]
 

@@ -3,19 +3,10 @@
 #pubtitle: title of layer as published by mapproxy
 #source_name: layer to request from WMS source
 #legend: true or false (default true)
+#transparent: true or false (default true)
 layers:
-    - name: opentopo_png
-      pubname: opentopo_png
-      pubtitle: opentopo png formaat
-      source_name: opentopo
-    - name: opentopo_jpeg
-      pubname: opentopo_jpeg
-      pubtitle: opentopo jpeg formaat
-      source_name: opentopo
-    - name: opentopo_achtergrond_png
-      source_name: opentopoachtergrond
-    - name: opentopo_achtergrond_jpeg
-      source_name: opentopoachtergrond
-    - name: luchtfotolabels_png
-      source_name: lufolabels
+    - name: mylayer
+      pubname: mylayer
+      pubtitle: My Awesome Layer
+      source_name: mysource
 levels: ['0_8', '9', '10', '11', '12', '13', '14']

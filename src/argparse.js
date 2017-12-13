@@ -44,6 +44,10 @@ parser.addArgument(
 )
 
 module.exports = function() {
+    if (process.argv.length < 3) {
+        parser.printHelp();
+        process.exit(0);
+    }
     return parser.parseArgs();
 }
 
